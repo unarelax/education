@@ -8,7 +8,7 @@
         <span>我国宪法是怎样诞生的</span>
     </div>
     <div class="body">
-        <el-tabs v-model="activeName" @tab-click="handleClick">
+        <el-tabs @tab-click="handleClick">
             <el-tab-pane>
                 <span slot="label"><i class="el-icon-user"></i> 普通达人</span>
                 <div class="content">
@@ -63,7 +63,12 @@
 
 <script>
 export default {
-  name: 'tabDrop'
+  name: 'tabDrop',
+    methods: {
+      handleClick(tab, event) {
+        console.log(tab, event);
+      }
+    }
 }
 </script>
 
@@ -112,7 +117,7 @@ export default {
     /* margin-top: 10px; */
 }
 .content {
-    width: 970px;
+    width: 960px;
     display: -webkit-flex;
     display: flex;
     flex-direction: row;
@@ -141,13 +146,13 @@ export default {
 }
 .course{
     font-size: 14px;
-    width: 970px;
+    width: 960px;
     padding: 0px 30px 10px 30px;
     text-align: start;
     /* padding-right: 30px; */
 }
 .number {
-    width: 970px;
+    width: 960px;
     background-color: #f7f8fc;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -163,8 +168,8 @@ export default {
     width: 30px; */
   display: inline-block;
   padding-top: 8px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 5px;
 }
 .numberAll {
     width: 908px;

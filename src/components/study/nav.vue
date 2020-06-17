@@ -56,6 +56,11 @@ export default {
 </script>
 
 <style>
+.el-button.is-round {
+    border-radius: 100px;
+    padding: 5px 9px;
+    border: 2px solid #DCDFE6;
+}
 .el-input__inner {
     border-radius: 100px;
     border: 2px solid #DCDFE6;
